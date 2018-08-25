@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/b0"
+            android:id="@+id/display"
+            android:background="@color/white"
+            android:gravity="end"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/bDivide"
+            android:onClick="operationClick"
+            android:text="@string/bDivide"
+            android:layout_column="3"/>
+        <Button
+            android:text="@string/b7"
+            android:onClick="numClick"
+            android:id="@+id/b7"/>
+        <Button android:text="@string/b8"
+            android:onClick="numClick"
+            android:id="@+id/b8"/>
+        <Button android:text="@string/b9"
+            android:onClick="numClick"
+            android:id="@+id/b9"/>
+        <Button android:text="@string/bPlus"
+            android:onClick="operationClick"
+            android:id="@+id/bPlus"/>
+
+        <Button android:text="@string/b4"
+            android:onClick="numClick"
+            android:id="@+id/b4"/>
+        <Button android:text="@string/b5"
+            android:onClick="numClick"
+            android:id="@+id/b5"/>
+        <Button android:text="@string/b6"
+            android:onClick="numClick"
+            android:id="@+id/b6"/>
+        <Button android:text="@string/bMult"
+            android:onClick="operationClick"
+            android:id="@+id/bMult"/>
+
+        <Button android:text="@string/b1"
+            android:onClick="numClick"
+            android:id="@+id/b1"/>
+        <Button android:text="@string/b2"
+            android:onClick="numClick"
+            android:id="@+id/b2"/>
+        <Button android:text="@string/b3"
+            android:onClick="numClick"
+            android:id="@+id/b3"/>
+        <Button android:text="@string/bMinus"
+            android:onClick="operationClick"
+            android:id="@+id/bMinus"/>
+
+        <Button android:text="@string/b0"
+            android:onClick="numClick"
+            android:id="@+id/b0"
+            />
+        <Button android:text="@string/bComma"
+            android:onClick="commaClicked"
+            android:id="@+id/bComma"/>
+        <Button android:text="@string/bClear"
+            android:onClick="operationClick"
+            android:id="@+id/bClear"/>
+        <Button android:text="@string/bEqual"
+            android:onClick="operationClick"
+            android:id="@+id/bEqual"/>
+
+    </GridLayout>
+</LinearLayout>

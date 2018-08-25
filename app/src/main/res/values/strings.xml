@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">calc</string>
+    <string name="b0">0</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b3">3</string>
+    <string name="b4">4</string>
+    <string name="b5">5</string>
+    <string name="b6">6</string>
+    <string name="b7">7</string>
+    <string name="b8">8</string>
+    <string name="b9">9</string>
+    <string name="bPlus">+</string>
+    <string name="bMinus">-</string>
+    <string name="bDivide">/</string>
+    <string name="bMult">*</string>
+    <string name="bClear">c</string>
+    <string name="bComma">,</string>
+    <string name="bEqual">=</string>
+
+</resources>

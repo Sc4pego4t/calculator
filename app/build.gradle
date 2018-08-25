@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        applicationId "ru.scapegoats.calc"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+    }
+    sourceSets {
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    afterEvaluate {
+        android.sourceSets.all { sourceSet ->
+            if (!sourceSet.name.startsWith('test') || !sourceSet.name.startsWith('androidTest')) {
+                sourceSet.kotlin.setSrcDirs([])
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0-rc01'
+
+
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.jetbrains.kotlin:kotlin-stdlib:1.2.51'
+    testCompile 'org.jetbrains.kotlin:kotlin-test-junit:1.2.51'
+    testCompile "com.nhaarman:mockito-kotlin:1.1.0"
+    androidTestCompile 'com.android.support.test:runner:1.0.2'
+    androidTestCompile 'com.android.support.test:rules:1.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    androidTestCompile 'com.android.support:support-annotations:27.1.1'
+}
